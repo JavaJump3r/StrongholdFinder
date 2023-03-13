@@ -1,6 +1,5 @@
 package io.github.javajump3r.strongholdfinder.strongholdfinder;
 
-import io.github.javajump3r.jjhud.client.LavaJumper;
 import net.minecraft.util.math.Vec3d;
 
 public class Line {
@@ -31,7 +30,6 @@ public class Line {
         var k2=b.k;
         var b1=a.b;
         var b2=b.b;
-        LavaJumper.log((b2-b1),(k1-k2));
         return (b2-b1)/(k1-k2);
     }
     static double findIntersectionY(Line a, Line b){
