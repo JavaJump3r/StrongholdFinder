@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "jjstronghold",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Stronghold Finder",
+  "description": "Mod for searching stronghold using clientside command",
   "authors": [
-    "Me!"
+    "JavaJumper"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://javajump3r.github.io/",
+    "sources": "https://github.com/JavaJump3r/StrongholdFinder"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL v3",
+  "icon": "assets/jjstronghold/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.javajump3r.strongholdfinder.StrongholdFinderInit"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
