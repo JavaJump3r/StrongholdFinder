@@ -19,11 +19,12 @@ public class StrongholdFinder {
     public StrongholdFinder(){
         ClientCommandRegistrationCallback.EVENT.register((dispatcher,registryAccess)->{
             var builder = getNewBuilder();
+            var t = argument("throw2",IntegerArgumentType.integer(0))
+                    .executes(this::calculate);
             builder.then(literal("register").executes(this::registerThrow));
             builder.then(literal("calculate")
                     .then(argument("throw1", IntegerArgumentType.integer(0))
-                            .then(argument("throw2",IntegerArgumentType.integer(0))
-                                    .executes(this::calculate))));
+                            .then(t)));
             builder.then(literal("print")
                     .then(argument("throwid",IntegerArgumentType.integer(0))
                     .executes(this::printThrow)));
